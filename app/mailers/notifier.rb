@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default :from => "hello@bluedoorcafe.org"
+  default :from => "info@smalltownbakery.com.au"
 
 
   # send a signup email to the user, pass in the user object that contains the user's email address
