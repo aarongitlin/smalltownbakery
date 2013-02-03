@@ -3,18 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $blue: rgba(15, 79, 138, 0.65);
 $darkBlue: darken($blue, 15%);
-$bodyBackground: #FAFCFD;
+$bodyBackground: url('/assets/organic_bread.jpg');
+$container-color: #f3f2de;
 
 
 $fg: "franklin-gothic-urw", sans-serif;
 $fg-comp: "franklin-gothic-ext-comp-urw", sans-serif;
+$typewriter: "coronette", serif;
 
 body {
-  background-color: #eee;
-  background-image: -webkit-linear-gradient(45deg, $blue 25%, transparent 25%, transparent 75%, $blue 75%, $darkBlue), 
-  -webkit-linear-gradient(45deg, $blue 25%, transparent 25%, transparent 75%, $blue 75%, $blue);
-  background-size:60px 60px;
-  background-position:0 0, 30px 30px;
+   background: $bodyBackground no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-size: 16px;
   line-height: 18px;
 }
@@ -29,8 +31,8 @@ p {
   font-family: $fg;
 }
 h2 {
-  font-size: 2.4em;
-  font-family: $fg-comp;
+  font-size: 1.6em;
+  font-family: $typewriter;
 }
 a {
   &:hover {
@@ -56,34 +58,45 @@ a {
   }
 }
 .container, .container-narrow {
-  background: $bodyBackground;
+  background-color: $container-color;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0px -1px 1px $darkBlue,-1px 0px 1px $lightBlue,
-              1px 0px 1px $darkBlue,0px 1px 1px $lightBlue,
-              2px 1px 1px $darkBlue,1px 2px 1px $lightBlue,
-              3px 2px 1px $darkBlue,2px 3px 1px $lightBlue,
-              4px 3px 1px $darkBlue,3px 4px 1px $lightBlue,
-              5px 4px 1px $darkBlue,4px 5px 1px $lightBlue,
-              6px 5px 1px $darkBlue,5px 6px 1px $lightBlue,
-              7px 6px 1px $darkBlue,6px 7px 1px $lightBlue,
-              8px 7px 1px $darkBlue,7px 8px 1px $lightBlue,
-              9px 8px 1px $darkBlue;
-}
+  opacity: 0.90;
 
+}
+.open-times {
+  padding-left: 50%;
+  margin-left: -180px;
+}
+ul#open-times-one, ul#open-times-two {
+  display: inline-block;
+  li {
+    list-style: none;
+    font-size: 1.2em;
+    line-height: 1.8em;
+  }
+}
+ul#open-times-one {
+  text-align: right;
+  li {
+    font-weight: bold;
+  }
+}
+ul#open-times-two {
+  margin-left: 0;
+}
 .logo {
   padding-left: 50%;
   margin-left: -150px;
   position: relative;
   a:hover {
     text-decoration: none;
-    background-color: $bodyBackground;
   }
 }
 h2.headline {
   text-align: center;
   text-transform: uppercase;
-  color: $blue;
+  color: black;
 }
 #home-text {
 

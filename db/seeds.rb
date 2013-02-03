@@ -6,4 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-settings = Setting.create!({:title => 'Blue Door Cafe'})
+settings = Setting.create!({:title => 'Small Town Bakery'})
+
+createAdmin = User.new({ :email => 'info@smalltownbakery.com.au', :password => 'password', :password_confirmation => 'password'}).save

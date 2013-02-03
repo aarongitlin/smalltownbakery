@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -50,3 +50,5 @@ gem 'thin'
 gem 'newrelic_rpm'
 
 gem "social-buttons", git: "git://github.com/kristianmandrup/social-buttons.git"
+
+gem 'devise', '~>2.2.2'

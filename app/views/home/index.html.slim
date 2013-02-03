@@ -6,9 +6,26 @@
     a class="socialite facebook-like" href="http://www.facebook.com/bluedoorcafeeastkew" data-href="http://www.facebook.com/bluedoorcafeeastkew" data-layout="button_count"
       | Like
 .logo
-  = link_to image_tag("blue_door_logo.png"), '/', :alt => 'Blue Door Cafe East Kew'
+  = link_to image_tag("SMAL_logo_blackcircle.png"), '/', :alt => 'Small Town Bakery East Kew'
 h2.headline #{@setting.description}
 hr
+.open-times
+  ul#open-times-one
+    li Monday
+    li Tuesday
+    li Wednesday
+    li Thursday
+    li Friday
+    li Saturday
+    li Sunday
+  ul#open-times-two
+    li ..........#{@setting.monday}
+    li ..........#{@setting.tuesday}
+    li ..........#{@setting.wednesday}
+    li ..........#{@setting.thursday}
+    li ..........#{@setting.friday}
+    li ..........#{@setting.saturday}
+    li ..........#{@setting.sunday}
 #home-text.row-fluid
   p.span10.offset1 = @setting.blurb
 hr

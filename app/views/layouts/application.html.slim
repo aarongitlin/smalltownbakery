@@ -15,7 +15,7 @@ head
   meta name="author" content=""
   meta name="keywords" content=""
   meta name="viewport" content="width=device-width, initial-scale=1.0"
-  script type="text/javascript" src="//use.typekit.net/ion0rmq.js"
+  script type="text/javascript" src="//use.typekit.net/geo4xqw.js"
   javascript:
     try{Typekit.load();}catch(e){}
 
@@ -24,8 +24,24 @@ head
   = csrf_meta_tag
 
 body
+  - if user_signed_in?
+    .container-narrow
+      .user-nav
+        p Logged in as #{current_user.email}
+        = link_to 'Edit profile', edit_user_registration_path
+        '  |
+        = link_to "Logout", destroy_user_session_path, method: :delete
+        '  |
+        = link_to "Home Page", home_index_path
+        '  |
+        = link_to "Edit Settings", settings_path
+
   .container-narrow
     .row-fluid
+      - if flash[:notice]
+        = flash[:notice]
+      - if flash[:alert]
+        = flash[:alert] 
       .span12
 
         = yield

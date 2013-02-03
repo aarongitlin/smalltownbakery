@@ -11,7 +11,17 @@
       = f.input :phone
       = f.input :address
       = f.input :thankyoutext,  :label => "Email notification text", :as => "text"
-    
-
-  .form-actions
-    = f.button :submit
+    h2 Openning Times
+    p e.g. "7:00am - 4:00pm"
+    .span5.open-times-one
+      = f.input :monday
+      = f.input :tuesday
+      = f.input :wednesday
+      = f.input :thursday
+    .span5.open-times-two
+      = f.input :friday
+      = f.input :saturday
+      = f.input :sunday
+    .span10
+      .form-actions
+        = f.button :submit
