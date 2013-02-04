@@ -2,6 +2,11 @@ class SettingsController < ApplicationController
   # GET /settings
   # GET /settings.json
   before_filter :authenticate_user!
+
+  def create
+    @setting = Setting.create( params[:setting] )
+  end
+
   def index
     @settings = Setting.find(1)
 

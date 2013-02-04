@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203130434) do
+ActiveRecord::Schema.define(:version => 20130204045633) do
 
   create_table "settings", :force => true do |t|
     t.string   "title"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(:version => 20130203130434) do
     t.string   "email"
     t.string   "phone"
     t.string   "description"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "address"
     t.string   "facebookurl"
     t.string   "twitterhandle"
@@ -32,6 +32,10 @@ ActiveRecord::Schema.define(:version => 20130203130434) do
     t.string   "friday"
     t.string   "saturday"
     t.string   "sunday"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   create_table "users", :force => true do |t|

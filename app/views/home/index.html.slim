@@ -6,7 +6,8 @@
     a class="socialite facebook-like" href="http://www.facebook.com/bluedoorcafeeastkew" data-href="http://www.facebook.com/bluedoorcafeeastkew" data-layout="button_count"
       | Like
 .logo
-  = link_to image_tag("SMAL_logo_blackcircle.png"), '/', :alt => 'Small Town Bakery East Kew'
+  /= link_to image_tag("SMAL_logo_blackcircle.png"), '/', :alt => 'Small Town Bakery East Kew'
+  = image_tag @setting.logo.url(:medium)
 h2.headline #{@setting.description}
 hr
 .open-times

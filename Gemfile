@@ -52,3 +52,5 @@ gem 'newrelic_rpm'
 gem "social-buttons", git: "git://github.com/kristianmandrup/social-buttons.git"
 
 gem 'devise', '~>2.2.2'
+
+gem "paperclip", "~> 3.0"
