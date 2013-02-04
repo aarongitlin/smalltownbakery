@@ -1,4 +1,4 @@
-= simple_form_for(@setting) do |f|
+= simple_form_for @setting, :multipart => true do |f|
   = f.error_notification
 
   .form-inputs
@@ -24,6 +24,21 @@
       = f.input :sunday
     .span10.pic-upload
       = f.file_field :logo
+    .span10
+      h4 New Files
+      
+      = f.fields_for :slides do |slide_fields|
+
+        - if slide_fields.object.new_record?
+          = slide_fields.file_field :slide
+
+      h4 Old Files
+
+      = f.fields_for :slides do |slide_fields|    
+        - unless slide_fields.object.new_record?
+          .thumb
+            = link_to image_tag(slide_fields.object.slide.url(:thumb)), slide_fields.object.slide.url(:original)
+            = slide_fields.check_box :_destroy  
     .span10
       .form-actions
         = f.button :submit
