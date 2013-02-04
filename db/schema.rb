@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130204045633) do
+ActiveRecord::Schema.define(:version => 20130204063640) do
+
+  create_table "setting_pictures", :force => true do |t|
+    t.string   "caption"
+    t.integer  "setting_id"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+  end
 
   create_table "settings", :force => true do |t|
     t.string   "title"
@@ -36,6 +47,16 @@ ActiveRecord::Schema.define(:version => 20130204045633) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+  end
+
+  create_table "slides", :force => true do |t|
+    t.string   "slide_file_name"
+    t.string   "slide_content_type"
+    t.integer  "slide_file_size"
+    t.datetime "slide_updated_at"
+    t.integer  "setting_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "users", :force => true do |t|
