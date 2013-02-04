@@ -5,6 +5,7 @@ class SettingsController < ApplicationController
 
   def create
     @setting = Setting.create( params[:setting] )
+
   end
 
   def index
@@ -31,6 +32,7 @@ class SettingsController < ApplicationController
   # GET /settings/new.json
   def new
     @setting = Setting.new
+    5.times { @setting.slides.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +43,7 @@ class SettingsController < ApplicationController
   # GET /settings/1/edit
   def edit
     @setting = Setting.find(1)
+    5.times { @setting.slides.build }
   end
 
   # POST /settings
